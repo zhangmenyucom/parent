@@ -140,12 +140,12 @@
 			<repository>
 				<id>nexus-releases</id>
 				<name>Nexus Release</name>
-				<url>http://192.168.1.106:8081/nexus/content/repositories/releases</url>
+				<url>http://192.168.80.129:8081/nexus/content/repositories/releases</url>
 			</repository>
 			<snapshotRepository>
 				<id>nexus-snapshots</id>
 				<name>Nexus Snapshot</name>
-				<url>http://192.168.1.106:8081/nexus/content/repositories/snapshots</url>
+				<url>http://192.168.80.129:8081/nexus/content/repositories/snapshots</url>
 			</snapshotRepository>
 		</distributionManagement>
 		<build>
