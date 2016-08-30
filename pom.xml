@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.taylor</groupId>
@@ -47,74 +46,90 @@
 		<version-log4j2>2.3</version-log4j2>
 		<version-slf4j>1.7.12</version-slf4j>
 		<version-commons-lang3>3.3.2</version-commons-lang3>
+		<version-commons-collections4>4.0</version-commons-collections4>
+		<version-commons-pool>1.6</version-commons-pool>
 		<version-joda-time>2.7</version-joda-time>
+		<version-activemq>5.1.0</version-activemq>
+		<version-aspectjrt>1.5.4</version-aspectjrt>
+		<version-lombok>1.16.4</version-lombok>
+		<version-jedis>2.9.0</version-jedis>
+		<version-fastjson>1.2.16</version-fastjson>
+		<version-jackson>2.8.1</version-jackson>
+		<version-jta>1.1</version-jta>
 	</properties>
 	<dependencyManagement>
-	<dependencies>
-	
-		<!-- junit -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${version-junit}</version>
-			<scope>test</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${version-spring}</version>
-		</dependency>
+		<dependencies>
 
-		<!-- gson -->
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>${version-gson}</version>
-		</dependency>
+			<!-- junit -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${version-junit}</version>
+				<scope>test</scope>
+			</dependency>
 
-		<!-- slf4j -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${version-slf4j}</version>
-		</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${version-spring}</version>
+			</dependency>
 
-		<!-- log4j2 -->
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>${version-log4j2}</version>
-		</dependency>
+			<!-- gson -->
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>${version-gson}</version>
+			</dependency>
 
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-slf4j-impl</artifactId>
-			<version>${version-log4j2}</version>
-		</dependency>
+			<!-- slf4j -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${version-slf4j}</version>
+			</dependency>
 
-		<!-- log4j -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>${version-slf4j}</version>
-		</dependency>
-		
-		<!-- commons utils -->
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>${version-commons-lang3}</version>
-		</dependency>
+			<!-- log4j2 -->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>${version-log4j2}</version>
+			</dependency>
 
-		<!-- joda-time -->
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>${version-joda-time}</version>
-		</dependency>
-		
-	</dependencies>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-slf4j-impl</artifactId>
+				<version>${version-log4j2}</version>
+			</dependency>
+
+			<!-- log4j -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${version-slf4j}</version>
+			</dependency>
+
+			<!-- commons utils -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${version-commons-lang3}</version>
+			</dependency>
+
+			<!-- joda-time -->
+			<dependency>
+				<groupId>joda-time</groupId>
+				<artifactId>joda-time</artifactId>
+				<version>${version-joda-time}</version>
+			</dependency>
+
+			<!-- activemq -->
+			<dependency>
+				<groupId>org.apache.activemq</groupId>
+				<artifactId>activemq-core</artifactId>
+				<version>${version-activemq}</version>
+			</dependency>
+
+		</dependencies>
 	</dependencyManagement>
 	<dependencies>
 		<!-- slf4j -->
@@ -122,42 +137,42 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 		</dependency>
-		
+
 		<!-- log4j-slf4j -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 		</dependency>
-		
-		</dependencies>
-		<distributionManagement>
-			<!-- 两个ID必须与 setting.xml中的<server><id>nexus-releases</id></server>保持一致 -->
-			<repository>
-				<id>nexus-releases</id>
-				<name>Nexus Release</name>
-				<url>http://192.168.186.128:8081/nexus/content/repositories/releases</url>
-			</repository>
-			<snapshotRepository>
-				<id>nexus-snapshots</id>
-				<name>Nexus Snapshot</name>
-				<url>http://192.168.186.128:8081/nexus/content/repositories/snapshots</url>
-			</snapshotRepository>
-		</distributionManagement>
-		<build>
+
+	</dependencies>
+	<distributionManagement>
+		<!-- 两个ID必须与 setting.xml中的<server><id>nexus-releases</id></server>保持一致 -->
+		<repository>
+			<id>nexus-releases</id>
+			<name>Nexus Release</name>
+			<url>http://192.168.186.128:8081/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<name>Nexus Snapshot</name>
+			<url>http://192.168.186.128:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<build>
 		<pluginManagement>
 			<plugins>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-eclipse-plugin</artifactId>
 					<version>${version-eclipse-plugin}</version>
-					<configuration>  
-						<downloadSources>true</downloadSources>  
-					</configuration>  
+					<configuration>
+						<downloadSources>true</downloadSources>
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -190,7 +205,7 @@
 						</execution>
 					</executions>
 				</plugin>
-				
+
 				<!-- compiler -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -203,28 +218,27 @@
 						<encoding>UTF-8</encoding>
 					</configuration>
 				</plugin>
-				
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>${version-jar-plugin}</version>
 				</plugin>
-				
+
 				<!-- test -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>${version-surefire-plugin}</version>
-					<!-- <configuration> <includes> <include>**/*Test.java</include> </includes> 
-						</configuration> -->
+					<!-- <configuration> <includes> <include>**/*Test.java</include> </includes> </configuration> -->
 				</plugin>
-				
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-release-plugin</artifactId>
 					<version>${version-release-plugin}</version>
 				</plugin>
-				
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-assembly-plugin</artifactId>
@@ -252,20 +266,20 @@
 						<overwrite>true</overwrite>
 					</configuration>
 				</plugin>
-				
+
 				<!-- cobertura -->
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>cobertura-maven-plugin</artifactId>
 					<version>${version-cobertura-plugin}</version>
 				</plugin>
-				
+
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>findbugs-maven-plugin</artifactId>
 					<version>${version-findbugs-plugin}</version>
 				</plugin>
-				
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-report-plugin</artifactId>
@@ -286,10 +300,7 @@
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>${version-project-info-reports-plugin}</version>
 					<configuration>
-						<!-- 
-						设置为true的话，会去网上找包所在的位置，很多都在googlecode上，没有代理访问不了
-						以后有了proxy可以考虑设置回来
-						 -->
+						<!-- 设置为true的话，会去网上找包所在的位置，很多都在googlecode上，没有代理访问不了 以后有了proxy可以考虑设置回来 -->
 						<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
 					</configuration>
 				</plugin>
